@@ -25,7 +25,7 @@ export const uploadFile = (req, res) => {
   res.status(200).json({ message: "Files uploaded successfully.", files: files.file1?.map(f => f.originalname) }); // Send success response
 };
 
-export const deleteFile = (req, res) => { 
+export const deleteFile = (req, res) => {  // create deleteFile function
   // Delete a file
   const fileName = req.params.fileName; // Get the file name from the request parameters
   const filePath = path.join("uploads", fileName); // Construct the file path
